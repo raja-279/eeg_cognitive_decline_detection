@@ -1,0 +1,37 @@
+# Data: never commit participant EEG or derived data
+data/
+datasets/
+eeg_cache/
+cache/
+*.set
+*.fdt
+*.edf
+*.bdf
+*.fif
+*.npy
+*.npz
+participants.tsv
+
+# Checkpoints and training outputs
+runs/
+checkpoints/
+outputs/
+*.pt
+*.pth
+*.ckpt
+*.log
+
+# Python / environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+
+# IDE / OS / local config
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.streamlit/secrets.toml
