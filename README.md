@@ -1,4 +1,4 @@
-# EEG-Based Cognitive Decline Detection Using Hierarchical Recurrence Plots and Modified ResNet18
+# EEG-Based Cognitive Decline Detection Using Recurrence Plot Representation and Hierarchical Deep Learning (ResNet)
 
 B.Tech (Computer Science and Engineering) final-year major project.
 
