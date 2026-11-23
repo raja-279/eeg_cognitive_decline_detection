@@ -122,3 +122,32 @@ streamlit run app.py
 Run this from the repository root after both checkpoints exist. You can upload a precomputed `.npy` image array or a raw `.set` file and click **Run Inference**. The app then shows the Stage 1 and Stage 2 probabilities. It is only a demo of the research prototype and not a diagnostic tool.
 
 ## 16. Repository structure
+
+├── preprocessing.py EEG loading, filtering, epoching, image conversion
+├── dataset.py Cached dataset, subject wise split, cache precomputation
+├── model.py Modified ResNet18 and lightweight CNN
+├── train_stage1.py Stage 1 training and test report
+├── train_stage2.py Stage 2 training and test report
+├── predict.py Command line hierarchical inference
+├── app.py Streamlit demo
+├── imgs.py Saves recurrence plot images from a cached .npy file
+├── DATASET_CITATION.md
+├── PUBLICATION_NOTES.md
+├── PUBLICATION_CHECKLIST.md
+├── requirements.txt
+└── .gitignore
+
+
+## 17. Limitations
+* This is an academic prototype. It is not clinically validated and not meant for diagnosis.
+* The number of subjects is small, so the test set has very few people and results can change with the split.
+* Metrics are calculated per EEG epoch, there is no external validation dataset, and the split is not stratified by class.
+* Performance is modest, especially the macro F1 for AD vs FTD.
+* The reported figures are approximate ranges without logs (see Section 11).
+
+## 18. References and dataset citation
+* Miltiadous, A., Tzimourta, K. D., Afrantou, T., Ioannidis, P., Grigoriadis, N., Tsalikakis, D. G., Angelidis, P., Tsipouras, M. G., Glavas, E., Giannakeas, N., & Tzallas, A. T. (2023). A Dataset of Scalp EEG Recordings of Alzheimer's Disease, Frontotemporal Dementia and Healthy Subjects from Routine EEG. *Data*, 8(6), 95. (The dataset identification still needs to be confirmed, see `DATASET_CITATION.md`.)
+* Markiewicz, C. J. *et al.* (2021). The OpenNeuro resource for sharing of neuroscience data. *eLife*, 10, e71774.
+* He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep residual learning for image recognition. *CVPR*, 770 to 778.
+* Eckmann, J.-P., Kamphorst, S. O., & Ruelle, D. (1987). Recurrence plots of dynamical systems. *Europhysics Letters*, 4(9), 973 to 977.
+* Gramfort, A. *et al.* (2013). MEG and EEG data analysis with MNE-Python. *Frontiers in Neuroscience*, 7, 267.
