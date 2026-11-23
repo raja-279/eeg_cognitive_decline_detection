@@ -122,21 +122,21 @@ streamlit run app.py
 Run this from the repository root after both checkpoints exist. You can upload a precomputed `.npy` image array or a raw `.set` file and click **Run Inference**. The app then shows the Stage 1 and Stage 2 probabilities. It is only a demo of the research prototype and not a diagnostic tool.
 
 ## 16. Repository structure
-
-├── preprocessing.py EEG loading, filtering, epoching, image conversion
-├── dataset.py Cached dataset, subject wise split, cache precomputation
-├── model.py Modified ResNet18 and lightweight CNN
-├── train_stage1.py Stage 1 training and test report
-├── train_stage2.py Stage 2 training and test report
-├── predict.py Command line hierarchical inference
-├── app.py Streamlit demo
-├── imgs.py Saves recurrence plot images from a cached .npy file
+```
+├── preprocessing.py          EEG loading, filtering, epoching, image conversion
+├── dataset.py                Cached dataset, subject wise split, cache precomputation
+├── model.py                  Modified ResNet18 and lightweight CNN
+├── train_stage1.py           Stage 1 training and test report
+├── train_stage2.py           Stage 2 training and test report
+├── predict.py                Command line hierarchical inference
+├── app.py                    Streamlit demo
+├── imgs.py                   Saves recurrence plot images from a cached .npy file
 ├── DATASET_CITATION.md
 ├── PUBLICATION_NOTES.md
 ├── PUBLICATION_CHECKLIST.md
 ├── requirements.txt
 └── .gitignore
-
+```
 
 ## 17. Limitations
 * This is an academic prototype. It is not clinically validated and not meant for diagnosis.
